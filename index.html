@@ -83,8 +83,6 @@
 
 <body>
 
-  <body>
-
 <!-- INTRO SCREEN -->
 <div id="intro" class="card">
   <h1>Hey Baby 💙</h1>
@@ -120,50 +118,53 @@ if (you === "Vikrant") {
 </div>
 
 
-  <script>
-    /* TYPING EFFECT */
-    const text =
-      "To the person who makes my heart feel safe, calm and happy 💕\n" +
-      "I hope this little surprise makes you smile today ✨";
+ <script>
+  /* TYPING EFFECT */
+  const text =
+    "To the person who makes my heart feel safe, calm and happy 💕\n" +
+    "I hope this little surprise makes you smile today ✨";
 
-    let i = 0;
-   function startSite() {
-  document.getElementById("intro").style.display = "none";
-  document.getElementById("main").style.display = "block";
-  typeText(); // start typing only after click
-}
+  let i = 0;
 
+  function typeText() {
+    if (i < text.length) {
+      document.getElementById("typing").innerHTML +=
+        text.charAt(i) === "\n" ? "<br>" : text.charAt(i);
+      i++;
+      setTimeout(typeText, 50);
     }
+  }
+
+  /* START BUTTON */
+  function startSite() {
+    document.getElementById("intro").style.display = "none";
+    document.getElementById("main").style.display = "block";
     typeText();
+  }
 
-    /* FLOATING HEARTS & CAKES */
-    setInterval(() => {
-      const el = document.createElement("div");
-      el.className = "float";
-      el.innerHTML = Math.random() > 0.5 ? "💖" : "🎂";
-      el.style.left = Math.random() * 100 + "vw";
-      el.style.fontSize = Math.random() * 20 + 18 + "px";
-      document.body.appendChild(el);
+  /* FLOATING HEARTS & CAKES */
+  setInterval(() => {
+    const el = document.createElement("div");
+    el.className = "float";
+    el.innerHTML = Math.random() > 0.5 ? "💖" : "🎂";
+    el.style.left = Math.random() * 100 + "vw";
+    el.style.fontSize = Math.random() * 20 + 18 + "px";
+    document.body.appendChild(el);
 
-      setTimeout(() => {
-        el.remove();
-      }, 6000);
-    }, 700);
+    setTimeout(() => el.remove(), 6000);
+  }, 700);
 
-    /* FINAL MESSAGE */
- function showLove() {
-  document.getElementById("msg").innerHTML =
-    "I love you beyond infinity ♾️";
+  /* FINAL MESSAGE */
+  function showLove() {
+    document.getElementById("msg").innerHTML =
+      "I love you beyond infinity ♾️❤️";
 
-  showInfinity();
+    setTimeout(() => {
+      alert("No limits. No end. Just us ♾️💫");
+    }, 2000);
+  }
+</script>
 
-  setTimeout(() => {
-    alert("There is no exit condition for us ♾️❤️");
-  }, 2000);
-}
-
-
-  </script>
 
 </body>
 </html>
