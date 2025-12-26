@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Happy Birthday ❤️</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #141e30, #243b55);
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding: 40px 15px;
+    }
+    .card {
+      background: rgba(0,0,0,0.45);
+      padding: 30px;
+      border-radius: 25px;
+      max-width: 520px;
+      margin: auto;
+      box-shadow: 0 0 30px rgba(255,255,255,0.15);
+    }
+    .photos img {
+      width: 110px;
+      height: 110px;
+      border-radius: 15px;
+      object-fit: cover;
+      margin: 8px;
+      border: 2px solid #ffb6c1;
+    }
+    button {
+      margin-top: 25px;
+      padding: 12px 30px;
+      background: #ffb6c1;
+      border: none;
+      border-radius: 25px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    #msg {
+      margin-top: 20px;
+      font-size: 17px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+    <h1>🎂 Happy Birthday Vikrant 🎂</h1>
+
+    <p>
+      To the person who makes my heart feel safe, calm and happy 💕<br>
+      Today is all about you ✨
+    </p>
+
+    <div class="photos">
+      <img src="photo1.jpg">
+      <img src="photo2.jpg">
+      <img src="photo3.jpg">
+    </div>
+
+    <pre>
+if (you === "Vikrant") {
+  myHeart = yours;
+  love++;
+  happiness = Infinity;
+}
+    </pre>
+
+    <button onclick="showLove()">Open your surprise 🎁</button>
+    <p id="msg"></p>
+  </div>
+
+  <script>
+    function showLove() {
+      document.getElementById("msg").innerHTML =
+        "I may not say it every time, but loving you is my favorite thing 💖🎂";
+    }
+  </script>
+
+</body>
+</html>
