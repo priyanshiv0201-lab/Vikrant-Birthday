@@ -87,7 +87,7 @@
 
 <!-- INTRO SCREEN -->
 <div id="intro" class="card">
-  <h1>Hey Vikrant 💙</h1>
+  <h1>Hey Baby 💙</h1>
   <p>
     I made something just for you…<br>
     but you have to start it yourself 😉
@@ -127,15 +127,14 @@ if (you === "Vikrant") {
       "I hope this little surprise makes you smile today ✨";
 
     let i = 0;
-    function typeText() {
-      if (i < text.length) {
-        document.getElementById("typing").innerHTML +=
-          text.charAt(i) === "\n" ? "<br>" : text.charAt(i);
-        i++;
-        setTimeout(typeText, 45);
-      }
+   function startSite() {
+  document.getElementById("intro").style.display = "none";
+  document.getElementById("main").style.display = "block";
+  typeText(); // start typing only after click
+}
+
     }
-    typeText();
+    //typeText();
 
     /* FLOATING HEARTS & CAKES */
     setInterval(() => {
