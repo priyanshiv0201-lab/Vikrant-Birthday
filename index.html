@@ -3,6 +3,25 @@
 <head>
   <title>Happy Birthday ❤️</title>
   <style>
+    .heart {
+  position: fixed;
+  bottom: -10px;
+  font-size: 20px;
+  animation: floatUp 6s linear infinite;
+  opacity: 0.7;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-110vh);
+    opacity: 0;
+  }
+}
+
     body {
       background: linear-gradient(135deg, #141e30, #243b55);
       color: white;
@@ -47,10 +66,7 @@
   <div class="card">
     <h1>🎂 Happy Birthday Vikrant 🎂</h1>
 
-    <p>
-      To the person who makes my heart feel safe, calm and happy 💕<br>
-      Today is all about you ✨
-    </p>
+    <p id="typing"></p>
 
     <div class="photos">
       <img src="photo1.jpg">
@@ -73,10 +89,28 @@ if (you === "Vikrant") {
 
   <script>
     function showLove() {
-      document.getElementById("msg").innerHTML =
-        "I may not say it every time, but loving you is my favorite thing 💖🎂";
-    }
+  document.getElementById("msg").innerHTML =
+    "Every version of my life has you in it 💖";
+
+  setTimeout(() => {
+    alert("I love you more than words, more than anything ❤️");
+  }, 1000);
+}
+
   </script>
+  setInterval(() => {
+  const heart = document.createElement("div");
+  heart.className = "heart";
+  heart.innerHTML = "💖";
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.fontSize = Math.random() * 20 + 15 + "px";
+  document.body.appendChild(heart);
+
+  setTimeout(() => {
+    heart.remove();
+  }, 6000);
+}, 800);
+
 
 </body>
 </html>
