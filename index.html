@@ -83,33 +83,42 @@
 
 <body>
 
-  <div class="card">
-    <h1>🎂 Happy Birthday Vikrant 🎂</h1>
+  <body>
 
-    <!-- TYPING TEXT -->
-    <p id="typing"></p>
+<!-- INTRO SCREEN -->
+<div id="intro" class="card">
+  <h1>Hey Vikrant 💙</h1>
+  <p>
+    I made something just for you…<br>
+    but you have to start it yourself 😉
+  </p>
+  <button onclick="startSite()">Start 🎮</button>
+</div>
 
-    <!-- PHOTOS -->
-    <div class="photos">
-      <img src="photo1.jpg">
-      <img src="photo2.jpg">
-      <img src="photo3.jpg">
-      <img src="photo4.jpg">
-    </div>
+<!-- MAIN CONTENT (HIDDEN FIRST) -->
+<div id="main" class="card" style="display:none;">
+  <h1>🎂 Happy Birthday Vikrant 🎂</h1>
 
-    <!-- CODE LOVE -->
-<pre>
+  <p id="typing"></p>
+
+  <div class="photos">
+    <img src="photo1.jpg">
+    <img src="photo2.jpg">
+    <img src="photo3.jpg">
+    <img src="photo4.jpg">
+  </div>
+
+  <pre>
 if (you === "Vikrant") {
   myHeart = yours;
   love = "beyond infinity ♾️";
-  happiness = Infinity;
 }
-</pre>
+  </pre>
 
+  <button onclick="showLove()">Open your surprise 🎁</button>
+  <p id="msg"></p>
+</div>
 
-    <button onclick="showLove()">Open your surprise 🎁</button>
-    <p id="msg"></p>
-  </div>
 
   <script>
     /* TYPING EFFECT */
@@ -143,14 +152,17 @@ if (you === "Vikrant") {
     }, 700);
 
     /* FINAL MESSAGE */
-  function showLove() {
+ function showLove() {
   document.getElementById("msg").innerHTML =
-    "I love you beyond infinity ♾️ — always and forever 💖";
+    "I love you beyond infinity ♾️";
+
+  showInfinity();
 
   setTimeout(() => {
-    alert("In every lifetime, in every version of me — it’s always you ♾️❤️");
-  }, 1000);
+    alert("There is no exit condition for us ♾️❤️");
+  }, 2000);
 }
+
 
   </script>
 
